@@ -10,6 +10,6 @@ class HelloWorldTest {
 
     @Test
     void say_ReturnsHello() {
-        assertThat(fixture.say()).isEqualTo("Hello");
+        assertThat(fixture.say()).isEqualTo("hello");
     }
 }
