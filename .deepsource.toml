@@ -1,13 +1,16 @@
 version = 1
 
 [[analyzers]]
+name = "test-coverage"
+
+[[analyzers]]
 name = "java"
 enabled = true
-# dependency_file_paths = [
-#  "pom.xml",
-#  "\*/pom.xml"
-#]
+dependency_file_paths = [
+  "pom.xml",
+  "\*/pom.xml"
+]
 
-  [analyzers.meta]
-    java_version = "11"
-    cyclomatic_complexity_threshold = "high"
+[analyzers.meta]
+java_version = "11"
+cyclomatic_complexity_threshold = "high"
