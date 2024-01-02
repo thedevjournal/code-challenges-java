@@ -8,7 +8,7 @@ name = "java"
 enabled = true
 dependency_file_paths = [
   "pom.xml",
-  "\*/pom.xml"
+  "*/pom.xml"
 ]
 
 [analyzers.meta]
