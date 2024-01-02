@@ -1,0 +1,13 @@
+version = 1
+
+[[analyzers]]
+name = "java"
+enabled = true
+# dependency_file_paths = [
+#  "pom.xml",
+#  "\*/pom.xml"
+#]
+
+  [analyzers.meta]
+    java_version = "11"
+    cyclomatic_complexity_threshold = "high"
