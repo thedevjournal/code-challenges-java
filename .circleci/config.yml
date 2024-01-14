@@ -12,11 +12,22 @@ jobs:
             # Build the project
             mvn -B clean verify
 
-            # Install and Run Deepsource Analysis
+            # Install and Send Coverage Report to Deepsource
             curl https://deepsource.io/cli | sh
             ./bin/deepsource report --analyzer test-coverage \
                 --key java \
                 --value-file jacoco-report/target/site/jacoco-aggregate/jacoco.xml
+      - run:
+          name: Codacy Coverage
+          command: |
+            # CODACY_API_TOKEN is injected via Environment Variable
+            export CODACY_ORGANIZATION_PROVIDER="gh"
+            export CODACY_USERNAME="thedevjournal"
+            export CODACY_PROJECT_NAME="code-challenges-java"
+
+            # Install and Send Coverage Report to Codacy
+            bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
+                -l Java -r jacoco-report/target/site/jacoco-aggregate/jacoco.xml
 
 workflows:
   build:
@@ -24,3 +35,4 @@ workflows:
       - build-and-test:
           context:
             - DEEPSOURCE
+            - CODACY
