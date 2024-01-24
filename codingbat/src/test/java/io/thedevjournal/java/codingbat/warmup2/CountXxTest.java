@@ -6,13 +6,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class CountXXTest {
+class CountXxTest {
 
-    private CountXX fixture;
+    private CountXx fixture;
 
     @BeforeEach
     void setUp() {
-        fixture = new CountXX();
+        fixture = new CountXx();
     }
 
     @Test

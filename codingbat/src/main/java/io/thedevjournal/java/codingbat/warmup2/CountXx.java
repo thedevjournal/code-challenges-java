@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public final class CountXX {
+public final class CountXx {
 
     static final Pattern PATTERN = Pattern.compile("([x]){2}");
 
