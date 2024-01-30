@@ -1,8 +1,8 @@
 package io.thedevjournal.java.codingbat.string1;
 
-import static io.thedevjournal.java.common.NumberConstants.ZERO;
 import static io.thedevjournal.java.common.NumberConstants.ONE;
 import static io.thedevjournal.java.common.NumberConstants.TWO;
+import static io.thedevjournal.java.common.NumberConstants.ZERO;
 import static io.thedevjournal.java.common.StringConstants.EMPTY_STRING;
 import static io.thedevjournal.java.common.StringConstants.EMPTY_STRING_SUPPLIER;
 
