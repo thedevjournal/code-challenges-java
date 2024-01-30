@@ -19,7 +19,8 @@ public class MiddleTwo {
                 throw new UnsupportedOperationException("MiddleTwo for odd lengths is not supported");
             }
 
-            final int middlePos = (inputLength / TWO) - 1;
+            final int inputLengthHalved = inputLength / TWO;
+            final int middlePos = inputLengthHalved - 1;
 
             return inputNormalized.substring(middlePos, middlePos + TWO);
         }
