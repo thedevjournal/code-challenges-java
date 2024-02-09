@@ -16,12 +16,10 @@ public class StartWord {
         final int inputLength = inputNormalized.length();
         final int wordLength = wordNormalized.length();
 
-        if (inputLength == 0 || wordLength == 0) {
-            return EMPTY_STRING;
-        } else if (inputLength == ONE && wordLength == ONE) {
-            return inputNormalized;
-        } else if (inputLength == ONE) {
-            return EMPTY_STRING;
+        final String cornerCases = cornerCases(inputNormalized, inputLength, wordLength);
+
+        if (cornerCases != null) {
+            return cornerCases;
         }
 
         final String search = wordNormalized.substring(ONE);
@@ -34,5 +32,17 @@ public class StartWord {
         final String matchedText = wordLength > ONE ? text : EMPTY_STRING;
 
         return text.equals(search) ? inputNormalized.charAt(0) + matchedText : EMPTY_STRING;
+    }
+
+    public String cornerCases(final String input, final int inputLength, final int wordLength) {
+        if (inputLength == 0 || wordLength == 0) {
+            return EMPTY_STRING;
+        } else if (inputLength == ONE && wordLength == ONE) {
+            return input;
+        } else if (inputLength == ONE) {
+            return EMPTY_STRING;
+        }
+
+        return null;
     }
 }
