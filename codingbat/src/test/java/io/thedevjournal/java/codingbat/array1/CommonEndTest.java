@@ -16,161 +16,161 @@ class CommonEndTest {
 
     @Test
     void testcase1() {
-        int[] nums1 = new int[] { 1, 2, 3 };
-        int[] nums2 = new int[] { 7, 3 };
+        final int[] nums1 = { 1, 2, 3 };
+        final int[] nums2 = { 7, 3 };
 
-        boolean expected = true;
+        final boolean expected = true;
 
-        boolean actual = fixture.commonEnd(nums1, nums2);
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] nums1 = new int[] { 1, 2, 3 };
-        int[] nums2 = new int[] { 7, 3, 2 };
+        final int[] nums1 = { 1, 2, 3 };
+        final int[] nums2 = { 7, 3, 2 };
 
-        boolean expected = false;
+        final boolean expected = false;
 
-        boolean actual = fixture.commonEnd(nums1, nums2);
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] nums1 = new int[] { 1, 2, 3 };
-        int[] nums2 = new int[] { 1, 3 };
+        final int[] nums1 = { 1, 2, 3 };
+        final int[] nums2 = { 1, 3 };
 
-        boolean expected = true;
+        final boolean expected = true;
 
-        boolean actual = fixture.commonEnd(nums1, nums2);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnFalseWhenBothNull() {
-        int[] nums1 = null;
-        int[] nums2 = null;
-
-        boolean expected = false;
-
-        boolean actual = fixture.commonEnd(nums1, nums2);
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnFalseWhenBothAreEmpty() {
-        int[] nums1 = new int[] {};
-        int[] nums2 = new int[] {};
+    void shouldReturnFalse_WhenBothNull() {
+        final int[] nums1 = null;
+        final int[] nums2 = null;
 
-        boolean expected = false;
+        final boolean expected = false;
 
-        boolean actual = fixture.commonEnd(nums1, nums2);
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnFalseWhenOneIsNullAndOtherIsEmpty() {
-        int[] nums1_1 = null;
-        int[] nums2_1 = new int[] {};
+    void shouldReturnFalse_WhenBothAreEmpty() {
+        final int[] nums1 = {};
+        final int[] nums2 = {};
 
-        int[] nums1_2 = new int[] {};
-        int[] nums2_2 = null;
+        final boolean expected = false;
 
-        boolean expected1 = false;
-        boolean expected2 = false;
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
-        boolean actual1 = fixture.commonEnd(nums1_1, nums2_1);
-        boolean actual2 = fixture.commonEnd(nums1_2, nums2_2);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnFalse_WhenOneIsNullAndOtherIsEmpty() {
+        final int[] numsA1 = null;
+        final int[] numsB1 = {};
+
+        final int[] numsA2 = {};
+        final int[] numsB2 = null;
+
+        final boolean expected1 = false;
+        final boolean expected2 = false;
+
+        final boolean actual1 = fixture.commonEnd(numsA1, numsB1);
+        final boolean actual2 = fixture.commonEnd(numsA2, numsB2);
 
         assertThat(actual1).isEqualTo(expected1);
         assertThat(actual2).isEqualTo(expected2);
     }
 
     @Test
-    void shouldReturnTrueWhenBothAreSingleElementAndSameValue() {
-        int[] nums1 = new int[] { 1 };
-        int[] nums2 = new int[] { 1 };
+    void shouldReturnTrue_WhenBothAreSingleElementAndSameValue() {
+        final int[] nums1 = { 1 };
+        final int[] nums2 = { 1 };
 
-        boolean expected = true;
+        final boolean expected = true;
 
-        boolean actual = fixture.commonEnd(nums1, nums2);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnFalseWhenBothAreSingleElementAndNotSameValue() {
-        int[] nums1 = new int[] { 1 };
-        int[] nums2 = new int[] { 2 };
-
-        boolean expected = false;
-
-        boolean actual = fixture.commonEnd(nums1, nums2);
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnTrueWhenEndsAreSameValue() {
-        int[] nums1 = new int[] { 1, 1 };
-        int[] nums2 = new int[] { 2, 1 };
+    void shouldReturnFalse_WhenBothAreSingleElementAndNotSameValue() {
+        final int[] nums1 = { 1 };
+        final int[] nums2 = { 2 };
 
-        boolean expected = true;
+        final boolean expected = false;
 
-        boolean actual = fixture.commonEnd(nums1, nums2);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnTrueWhenFirstAreSameValue() {
-        int[] nums1 = new int[] { 1, 2 };
-        int[] nums2 = new int[] { 1, 1 };
-
-        boolean expected = true;
-
-        boolean actual = fixture.commonEnd(nums1, nums2);
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnFalseWhenFirstAndLastAreSame() {
-        int[] nums1_1 = new int[] { 1, 2 };
-        int[] nums2_1 = new int[] { 3, 1 };
+    void shouldReturnTrue_WhenEndsAreSameValue() {
+        final int[] nums1 = { 1, 1 };
+        final int[] nums2 = { 2, 1 };
 
-        int[] nums1_2 = new int[] { 2, 1 };
-        int[] nums2_2 = new int[] { 1, 3 };
+        final boolean expected = true;
 
-        boolean expected1 = false;
-        boolean expected2 = false;
+        final boolean actual = fixture.commonEnd(nums1, nums2);
 
-        boolean actual1 = fixture.commonEnd(nums1_1, nums2_1);
-        boolean actual2 = fixture.commonEnd(nums1_2, nums2_2);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnTrue_WhenFirstAreSameValue() {
+        final int[] nums1 = { 1, 2 };
+        final int[] nums2 = { 1, 1 };
+
+        final boolean expected = true;
+
+        final boolean actual = fixture.commonEnd(nums1, nums2);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnFalse_WhenFirstAndLastAreSame() {
+        final int[] numsA1 = { 1, 2 };
+        final int[] numsB1 = { 3, 1 };
+
+        final int[] numsA2 = { 2, 1 };
+        final int[] numsB2 = { 1, 3 };
+
+        final boolean expected1 = false;
+        final boolean expected2 = false;
+
+        final boolean actual1 = fixture.commonEnd(numsA1, numsB1);
+        final boolean actual2 = fixture.commonEnd(numsA2, numsB2);
 
         assertThat(actual1).isEqualTo(expected1);
         assertThat(actual2).isEqualTo(expected2);
     }
 
     @Test
-    void shouldReturnFalseWhenOneIsEmptyAndOtherIsNot() {
-        int[] nums1_1 = new int[] {};
-        int[] nums2_1 = new int[] { 3, 1 };
+    void shouldReturnFalse_WhenOneIsEmptyAndOtherIsNot() {
+        final int[] numsA1 = {};
+        final int[] numsB1 = { 3, 1 };
 
-        int[] nums1_2 = new int[] { 2, 1 };
-        int[] nums2_2 = new int[] {};
+        final int[] numsA2 = { 2, 1 };
+        final int[] numsB2 = {};
 
-        boolean expected1 = false;
-        boolean expected2 = false;
+        final boolean expected1 = false;
+        final boolean expected2 = false;
 
-        boolean actual1 = fixture.commonEnd(nums1_1, nums2_1);
-        boolean actual2 = fixture.commonEnd(nums1_2, nums2_2);
+        final boolean actual1 = fixture.commonEnd(numsA1, numsB1);
+        final boolean actual2 = fixture.commonEnd(numsA2, numsB2);
 
         assertThat(actual1).isEqualTo(expected1);
         assertThat(actual2).isEqualTo(expected2);
