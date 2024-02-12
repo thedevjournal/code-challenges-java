@@ -16,106 +16,106 @@ class BiggerTwoTest {
 
     @Test
     void testcase1() {
-        final int[] a = new int[] { 1, 2 };
-        final int[] b = new int[] { 3, 4 };
+        final int[] arrayA = { 1, 2 };
+        final int[] arrayB = { 3, 4 };
 
-        final int[] expected = new int[] { 3, 4 };
+        final int[] expected = { 3, 4 };
 
-        final int[] actual = fixture.biggerTwo(a, b);
+        final int[] actual = fixture.biggerTwo(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        final int[] a = new int[] { 3, 4 };
-        final int[] b = new int[] { 1, 2 };
+        final int[] arrayA = { 3, 4 };
+        final int[] arrayB = { 1, 2 };
 
-        final int[] expected = new int[] { 3, 4 };
+        final int[] expected = { 3, 4 };
 
-        final int[] actual = fixture.biggerTwo(a, b);
+        final int[] actual = fixture.biggerTwo(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        final int[] a = new int[] { 1, 1 };
-        final int[] b = new int[] { 1, 2 };
+        final int[] arrayA = { 1, 1 };
+        final int[] arrayB = { 1, 2 };
 
-        final int[] expected = new int[] { 1, 2 };
+        final int[] expected = { 1, 2 };
 
-        final int[] actual = fixture.biggerTwo(a, b);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnEmptyWhenBothAreNull() {
-        final int[] a = null;
-        final int[] b = null;
-
-        final int[] expected = new int[] {};
-
-        final int[] actual = fixture.biggerTwo(a, b);
+        final int[] actual = fixture.biggerTwo(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenBothAreEmpty() {
-        final int[] a = new int[] {};
-        final int[] b = new int[] {};
+    void shouldReturnEmpty_WhenBothAreNull() {
+        final int[] arrayA = null;
+        final int[] arrayB = null;
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
-        final int[] actual = fixture.biggerTwo(a, b);
+        final int[] actual = fixture.biggerTwo(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenOneIsNullAndOtherIsEmpty() {
-        final int[] a1 = null;
-        final int[] b1 = new int[] {};
+    void shouldReturnEmpty_WhenBothAreEmpty() {
+        final int[] arrayA = {};
+        final int[] arrayB = {};
 
-        final int[] a2 = new int[] {};
-        final int[] b2 = null;
+        final int[] expected = {};
 
-        final int[] expected = new int[] {};
+        final int[] actual = fixture.biggerTwo(arrayA, arrayB);
 
-        final int[] actual1 = fixture.biggerTwo(a1, b1);
-        final int[] actual2 = fixture.biggerTwo(a2, b2);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnEmpty_WhenOneIsNullAndOtherIsEmpty() {
+        final int[] arrayA1 = null;
+        final int[] arrayB1 = {};
+
+        final int[] arrayA2 = {};
+        final int[] arrayB2 = null;
+
+        final int[] expected = {};
+
+        final int[] actual1 = fixture.biggerTwo(arrayA1, arrayB1);
+        final int[] actual2 = fixture.biggerTwo(arrayA2, arrayB2);
 
         assertThat(actual1).isEqualTo(expected);
         assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnNonEmptyWhenOneIsEmptyAndOtherIsNotEmpty() {
-        final int[] a1 = new int[] { 1 };
-        final int[] b1 = new int[] {};
+    void shouldReturnNonEmpty_WhenOneIsEmptyAndOtherIsNotEmpty() {
+        final int[] arrayA1 = { 1 };
+        final int[] arrayB1 = {};
 
-        final int[] a2 = new int[] {};
-        final int[] b2 = new int[] { 1 };
+        final int[] arrayA2 = {};
+        final int[] arrayB2 = { 1 };
 
-        final int[] expected = new int[] { 1 };
+        final int[] expected = { 1 };
 
-        final int[] actual1 = fixture.biggerTwo(a1, b1);
-        final int[] actual2 = fixture.biggerTwo(a2, b2);
+        final int[] actual1 = fixture.biggerTwo(arrayA1, arrayB1);
+        final int[] actual2 = fixture.biggerTwo(arrayA2, arrayB2);
 
         assertThat(actual1).isEqualTo(expected);
         assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnAWhenSumIsSame() {
-        final int[] a = new int[] { 1, 1 };
-        final int[] b = new int[] { 2, 0 };
+    void shouldReturnA_WhenSumIsSame() {
+        final int[] arrayA = { 1, 1 };
+        final int[] arrayB = { 2, 0 };
 
-        final int[] expected = new int[] { 1, 1 };
+        final int[] expected = { 1, 1 };
 
-        final int[] actual = fixture.biggerTwo(a, b);
+        final int[] actual = fixture.biggerTwo(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
