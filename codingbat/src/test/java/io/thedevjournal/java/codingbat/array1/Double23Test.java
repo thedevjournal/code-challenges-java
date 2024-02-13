@@ -17,7 +17,7 @@ class Double23Test {
     @Test
     void testcase1() {
 
-        final int[] nums = new int[] { 2, 2 };
+        final int[] nums = { 2, 2 };
 
         final boolean expected = true;
 
@@ -28,7 +28,7 @@ class Double23Test {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 3, 3 };
+        final int[] nums = { 3, 3 };
 
         final boolean expected = true;
 
@@ -39,7 +39,7 @@ class Double23Test {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 2, 3 };
+        final int[] nums = { 2, 3 };
 
         final boolean expected = false;
 
@@ -49,7 +49,7 @@ class Double23Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumsIsNull() {
+    void shouldReturnFalse_WhenNumsIsNull() {
         final int[] nums = null;
 
         final boolean expected = false;
@@ -60,8 +60,8 @@ class Double23Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumsIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnFalse_WhenNumsIsEmpty() {
+        final int[] nums = {};
 
         final boolean expected = false;
 
@@ -71,8 +71,8 @@ class Double23Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumsIsSingleElementAndNot2Or3() {
-        final int[] nums = new int[] { 5 };
+    void shouldReturnFalse_WhenNumsIsSingleElementAndNot2Or3() {
+        final int[] nums = { 5 };
 
         final boolean expected = false;
 
