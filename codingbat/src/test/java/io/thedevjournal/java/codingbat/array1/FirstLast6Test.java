@@ -16,77 +16,77 @@ class FirstLast6Test {
 
     @Test
     void testcase1() {
-        int[] nums = new int[] { 1, 2, 6 };
+        final int[] nums = { 1, 2, 6 };
 
-        boolean expected = true;
+        final boolean expected = true;
 
-        boolean actual = fixture.firstLast6(nums);
+        final boolean actual = fixture.firstLast6(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] nums = new int[] { 6, 1, 2, 3 };
+        final int[] nums = { 6, 1, 2, 3 };
 
-        boolean expected = true;
+        final boolean expected = true;
 
-        boolean actual = fixture.firstLast6(nums);
+        final boolean actual = fixture.firstLast6(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] nums = new int[] { 13, 6, 1, 2, 3 };
+        final int[] nums = { 13, 6, 1, 2, 3 };
 
-        boolean expected = false;
+        final boolean expected = false;
 
-        boolean actual = fixture.firstLast6(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnFalseWhenNumIsNull() {
-        int[] nums = null;
-
-        boolean expected = false;
-
-        boolean actual = fixture.firstLast6(nums);
+        final boolean actual = fixture.firstLast6(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnFalseWhenNumIsEmpty() {
-        int[] nums = null;
+    void shouldReturnFalse_WhenNumIsNull() {
+        final int[] nums = null;
 
-        boolean expected = false;
+        final boolean expected = false;
 
-        boolean actual = fixture.firstLast6(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnTrueWhenNumHasSingleElement6() {
-        int[] nums = new int[] { 6 };
-
-        boolean expected = true;
-
-        boolean actual = fixture.firstLast6(nums);
+        final boolean actual = fixture.firstLast6(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnFalseWhenNumHasSingleElementNon6() {
-        int[] nums = new int[] { 1 };
+    void shouldReturnFalse_WhenNumIsEmpty() {
+        final int[] nums = null;
 
-        boolean expected = false;
+        final boolean expected = false;
 
-        boolean actual = fixture.firstLast6(nums);
+        final boolean actual = fixture.firstLast6(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnTrue_WhenNumHasSingleElement6() {
+        final int[] nums = { 6 };
+
+        final boolean expected = true;
+
+        final boolean actual = fixture.firstLast6(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnFalse_WhenNumHasSingleElementNon6() {
+        final int[] nums = { 1 };
+
+        final boolean expected = false;
+
+        final boolean actual = fixture.firstLast6(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
