@@ -16,72 +16,72 @@ class Front11Test {
 
     @Test
     void testcase1() {
-        final int[] a = new int[] { 1, 2, 3 };
-        final int[] b = new int[] { 7, 9, 8 };
+        final int[] arrayA = { 1, 2, 3 };
+        final int[] arrayB = { 7, 9, 8 };
 
-        final int[] expected = new int[] { 1, 7 };
+        final int[] expected = { 1, 7 };
 
-        final int[] actual = fixture.front11(a, b);
+        final int[] actual = fixture.front11(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        final int[] a = new int[] { 1 };
-        final int[] b = new int[] { 2 };
+        final int[] arrayA = { 1 };
+        final int[] arrayB = { 2 };
 
-        final int[] expected = new int[] { 1, 2 };
+        final int[] expected = { 1, 2 };
 
-        final int[] actual = fixture.front11(a, b);
+        final int[] actual = fixture.front11(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        final int[] a = new int[] { 1, 7 };
-        final int[] b = new int[] {};
+        final int[] arrayA = { 1, 7 };
+        final int[] arrayB = {};
 
-        final int[] expected = new int[] { 1 };
+        final int[] expected = { 1 };
 
-        final int[] actual = fixture.front11(a, b);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnEmptyWhenBothAreNull() {
-        final int[] a = null;
-        final int[] b = null;
-
-        final int[] expected = new int[] {};
-
-        final int[] actual = fixture.front11(a, b);
+        final int[] actual = fixture.front11(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenBothAreEmpty() {
-        final int[] a = new int[] {};
-        final int[] b = new int[] {};
+    void shouldReturnEmpty_WhenBothAreNull() {
+        final int[] arrayA = null;
+        final int[] arrayB = null;
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
-        final int[] actual = fixture.front11(a, b);
+        final int[] actual = fixture.front11(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnFromBWhenAIsEmptyAndBIsNonEmpty() {
-        final int[] a = new int[] {};
-        final int[] b = new int[] { 1 };
+    void shouldReturnEmpty_WhenBothAreEmpty() {
+        final int[] arrayA = {};
+        final int[] arrayB = {};
 
-        final int[] expected = new int[] { 1 };
+        final int[] expected = {};
 
-        final int[] actual = fixture.front11(a, b);
+        final int[] actual = fixture.front11(arrayA, arrayB);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnFromB_WhenAIsEmptyAndBIsNonEmpty() {
+        final int[] arrayA = {};
+        final int[] arrayB = { 1 };
+
+        final int[] expected = { 1 };
+
+        final int[] actual = fixture.front11(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
