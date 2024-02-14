@@ -16,9 +16,9 @@ class Fix23Test {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        final int[] expected = new int[] { 1, 2, 0 };
+        final int[] expected = { 1, 2, 0 };
 
         final int[] actual = fixture.fix23(nums);
 
@@ -27,9 +27,9 @@ class Fix23Test {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 2, 3, 5 };
+        final int[] nums = { 2, 3, 5 };
 
-        final int[] expected = new int[] { 2, 0, 5 };
+        final int[] expected = { 2, 0, 5 };
 
         final int[] actual = fixture.fix23(nums);
 
@@ -38,9 +38,9 @@ class Fix23Test {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 1, 2, 1 };
+        final int[] nums = { 1, 2, 1 };
 
-        final int[] expected = new int[] { 1, 2, 1 };
+        final int[] expected = { 1, 2, 1 };
 
         final int[] actual = fixture.fix23(nums);
 
@@ -48,10 +48,10 @@ class Fix23Test {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsNull() {
+    void shouldReturnEmpty_WhenNumsIsNull() {
         final int[] nums = null;
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.fix23(nums);
 
@@ -59,21 +59,10 @@ class Fix23Test {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnEmpty_WhenNumsIsEmpty() {
+        final int[] nums = {};
 
-        final int[] expected = new int[] {};
-
-        final int[] actual = fixture.fix23(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnSameWhenNumsIsSingleElement() {
-        final int[] nums = new int[] { 2 };
-
-        final int[] expected = new int[] { 2 };
+        final int[] expected = {};
 
         final int[] actual = fixture.fix23(nums);
 
@@ -81,10 +70,10 @@ class Fix23Test {
     }
 
     @Test
-    void shouldReturnValidWhenNumsIsDoubleElementAnd2and3() {
-        final int[] nums = new int[] { 2, 3 };
+    void shouldReturnSame_WhenNumsIsSingleElement() {
+        final int[] nums = { 2 };
 
-        final int[] expected = new int[] { 2, 0 };
+        final int[] expected = { 2 };
 
         final int[] actual = fixture.fix23(nums);
 
@@ -92,10 +81,21 @@ class Fix23Test {
     }
 
     @Test
-    void shouldReturnValidWhenNumsIsDoubleElementAndNot2and3() {
-        final int[] nums = new int[] { 3, 2 };
+    void shouldReturnValid_WhenNumsIsDoubleElementAnd2and3() {
+        final int[] nums = { 2, 3 };
 
-        final int[] expected = new int[] { 3, 2 };
+        final int[] expected = { 2, 0 };
+
+        final int[] actual = fixture.fix23(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnValid_WhenNumsIsDoubleElementAndNot2and3() {
+        final int[] nums = { 3, 2 };
+
+        final int[] expected = { 3, 2 };
 
         final int[] actual = fixture.fix23(nums);
 
