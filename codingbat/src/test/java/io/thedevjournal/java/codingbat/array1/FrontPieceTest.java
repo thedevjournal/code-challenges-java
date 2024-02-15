@@ -16,9 +16,9 @@ class FrontPieceTest {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        final int[] expected = new int[] { 1, 2 };
+        final int[] expected = { 1, 2 };
 
         final int[] actual = fixture.frontPiece(nums);
 
@@ -27,9 +27,9 @@ class FrontPieceTest {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 1, 2 };
+        final int[] nums = { 1, 2 };
 
-        final int[] expected = new int[] { 1, 2 };
+        final int[] expected = { 1, 2 };
 
         final int[] actual = fixture.frontPiece(nums);
 
@@ -38,9 +38,9 @@ class FrontPieceTest {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 1 };
+        final int[] nums = { 1 };
 
-        final int[] expected = new int[] { 1 };
+        final int[] expected = { 1 };
 
         final int[] actual = fixture.frontPiece(nums);
 
@@ -48,10 +48,10 @@ class FrontPieceTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsNull() {
+    void shouldReturnEmpty_WhenNumsIsNull() {
         final int[] nums = null;
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.frontPiece(nums);
 
@@ -59,10 +59,10 @@ class FrontPieceTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnEmpty_WhenNumsIsEmpty() {
+        final int[] nums = {};
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.frontPiece(nums);
 
