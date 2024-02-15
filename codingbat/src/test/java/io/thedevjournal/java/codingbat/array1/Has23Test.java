@@ -16,7 +16,7 @@ class Has23Test {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 2, 5 };
+        final int[] nums = { 2, 5 };
 
         final boolean expected = true;
 
@@ -27,7 +27,7 @@ class Has23Test {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 4, 3 };
+        final int[] nums = { 4, 3 };
 
         final boolean expected = true;
 
@@ -38,7 +38,7 @@ class Has23Test {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 4, 5 };
+        final int[] nums = { 4, 5 };
 
         final boolean expected = false;
 
@@ -48,7 +48,7 @@ class Has23Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumIsNull() {
+    void shouldReturnFalse_WhenNumIsNull() {
         final int[] nums = null;
 
         final boolean expected = false;
@@ -59,8 +59,8 @@ class Has23Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnFalse_WhenNumIsEmpty() {
+        final int[] nums = {};
 
         final boolean expected = false;
 
@@ -70,9 +70,9 @@ class Has23Test {
     }
 
     @Test
-    void shouldReturnTrueWhenNumIsSingleElementAndHas2Or3() {
-        final int[] nums1 = new int[] { 2 };
-        final int[] nums2 = new int[] { 3 };
+    void shouldReturnTrue_WhenNumIsSingleElementAndHas2Or3() {
+        final int[] nums1 = { 2 };
+        final int[] nums2 = { 3 };
 
         final boolean expected = true;
 
@@ -84,8 +84,8 @@ class Has23Test {
     }
 
     @Test
-    void shouldReturnTrueWhenNumIsSingleElementAndDoesntHave2Or3() {
-        final int[] nums = new int[] { 4 };
+    void shouldReturnTrue_WhenNumIsSingleElementAndDoesntHave2Or3() {
+        final int[] nums = { 4 };
 
         final boolean expected = false;
 
