@@ -73,7 +73,7 @@ class MakeEndsTest {
     void shouldReturnValid_WhenNumIsSingleElement() {
         final int[] nums = { 1 };
 
-        final int[] expected = { 1 , 1};
+        final int[] expected = { 1, 1};
 
         final int[] actual = fixture.makeEnds(nums);
 
