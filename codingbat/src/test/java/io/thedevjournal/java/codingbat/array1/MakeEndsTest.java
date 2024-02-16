@@ -16,9 +16,9 @@ class MakeEndsTest {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        final int[] expected = new int[] { 1, 3 };
+        final int[] expected = { 1, 3 };
 
         final int[] actual = fixture.makeEnds(nums);
 
@@ -27,9 +27,9 @@ class MakeEndsTest {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 1, 2, 3, 4 };
+        final int[] nums = { 1, 2, 3, 4 };
 
-        final int[] expected = new int[] { 1, 4 };
+        final int[] expected = { 1, 4 };
 
         final int[] actual = fixture.makeEnds(nums);
 
@@ -38,9 +38,9 @@ class MakeEndsTest {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 7, 4, 6, 2 };
+        final int[] nums = { 7, 4, 6, 2 };
 
-        final int[] expected = new int[] { 7, 2 };
+        final int[] expected = { 7, 2 };
 
         final int[] actual = fixture.makeEnds(nums);
 
@@ -48,10 +48,10 @@ class MakeEndsTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumIsNull() {
+    void shouldReturnEmpty_WhenNumIsNull() {
         final int[] nums = null;
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.makeEnds(nums);
 
@@ -59,21 +59,10 @@ class MakeEndsTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnEmpty_WhenNumIsEmpty() {
+        final int[] nums = {};
 
-        final int[] expected = new int[] {};
-
-        final int[] actual = fixture.makeEnds(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnValidWhenNumIsSingleElement() {
-        final int[] nums = new int[] { 1 };
-
-        final int[] expected = new int[] { 1 , 1};
+        final int[] expected = {};
 
         final int[] actual = fixture.makeEnds(nums);
 
@@ -81,10 +70,21 @@ class MakeEndsTest {
     }
 
     @Test
-    void shouldReturnValidWhenNumIsDoubleElement() {
-        final int[] nums = new int[] { 1, 2 };
+    void shouldReturnValid_WhenNumIsSingleElement() {
+        final int[] nums = { 1 };
 
-        final int[] expected = new int[] { 1, 2 };
+        final int[] expected = { 1 , 1};
+
+        final int[] actual = fixture.makeEnds(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnValid_WhenNumIsDoubleElement() {
+        final int[] nums = { 1, 2 };
+
+        final int[] expected = { 1, 2 };
 
         final int[] actual = fixture.makeEnds(nums);
 
