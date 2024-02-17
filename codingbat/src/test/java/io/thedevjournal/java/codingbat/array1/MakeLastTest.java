@@ -16,9 +16,9 @@ class MakeLastTest {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 4, 5, 6 };
+        final int[] nums = { 4, 5, 6 };
 
-        final int[] expected = new int[] { 0, 0, 0, 0, 0, 6 };
+        final int[] expected = { 0, 0, 0, 0, 0, 6 };
 
         final int[] actual = fixture.makeLast(nums);
 
@@ -27,9 +27,9 @@ class MakeLastTest {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 1, 2 };
+        final int[] nums = { 1, 2 };
 
-        final int[] expected = new int[] { 0, 0, 0, 2 };
+        final int[] expected = { 0, 0, 0, 2 };
 
         final int[] actual = fixture.makeLast(nums);
 
@@ -38,9 +38,9 @@ class MakeLastTest {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 3 };
+        final int[] nums = { 3 };
 
-        final int[] expected = new int[] { 0, 3 };
+        final int[] expected = { 0, 3 };
 
         final int[] actual = fixture.makeLast(nums);
 
@@ -48,10 +48,10 @@ class MakeLastTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsNull() {
+    void shouldReturnEmpty_WhenNumsIsNull() {
         final int[] nums = null;
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.makeLast(nums);
 
@@ -59,10 +59,10 @@ class MakeLastTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnEmpty_WhenNumsIsEmpty() {
+        final int[] nums = {};
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.makeLast(nums);
 
