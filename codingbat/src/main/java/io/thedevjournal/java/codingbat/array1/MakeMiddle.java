@@ -18,7 +18,8 @@ public class MakeMiddle {
             throw new IllegalArgumentException();
         }
 
-        final int midLeft = (numsNormalized.length / TWO) - ONE;
+        final int middle = numsNormalized.length / TWO;
+        final int midLeft = middle - ONE;
         final int midRight = midLeft + ONE;
 
         return new int[] { numsNormalized[midLeft], numsNormalized[midRight] };
