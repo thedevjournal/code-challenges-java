@@ -17,9 +17,9 @@ class MakeMiddleTest {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 2, 3, 4 };
+        final int[] nums = { 1, 2, 3, 4 };
 
-        final int[] expected = new int[] { 2, 3 };
+        final int[] expected = { 2, 3 };
 
         final int[] actual = fixture.makeMiddle(nums);
 
@@ -28,9 +28,9 @@ class MakeMiddleTest {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 7, 1, 2, 3, 4, 9 };
+        final int[] nums = { 7, 1, 2, 3, 4, 9 };
 
-        final int[] expected = new int[] { 2, 3 };
+        final int[] expected = { 2, 3 };
 
         final int[] actual = fixture.makeMiddle(nums);
 
@@ -39,9 +39,9 @@ class MakeMiddleTest {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 1, 2 };
+        final int[] nums = { 1, 2 };
 
-        final int[] expected = new int[] { 1, 2 };
+        final int[] expected = { 1, 2 };
 
         final int[] actual = fixture.makeMiddle(nums);
 
@@ -49,10 +49,10 @@ class MakeMiddleTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsNull() {
+    void shouldReturnEmpty_WhenNumsIsNull() {
         final int[] nums = null;
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.makeMiddle(nums);
 
@@ -60,10 +60,10 @@ class MakeMiddleTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnEmpty_WhenNumsIsEmpty() {
+        final int[] nums = {};
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual = fixture.makeMiddle(nums);
 
@@ -71,8 +71,8 @@ class MakeMiddleTest {
     }
 
     @Test
-    void shouldThrowExceptionWhenNumIsOddLength() {
-        final int[] nums = new int[] { 1, 2, 3 };
+    void shouldThrowException_WhenNumIsOddLength() {
+        final int[] nums = { 1, 2, 3 };
 
         assertThatExceptionOfType(IllegalArgumentException.class)
                 .isThrownBy(() -> fixture.makeMiddle(nums));
