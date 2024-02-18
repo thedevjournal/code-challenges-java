@@ -16,9 +16,9 @@ class MakePiTest {
 
     @Test
     void testcase1() {
-        int[] expected = new int[] { 3, 1, 4 };
+        final int[] expected = { 3, 1, 4 };
 
-        int[] actual = fixture.makePi();
+        final int[] actual = fixture.makePi();
 
         assertThat(actual).isEqualTo(expected);
     }
