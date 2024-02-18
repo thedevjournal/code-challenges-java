@@ -16,66 +16,66 @@ class MaxEnd3Test {
 
     @Test
     void testcase1() {
-        int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        int[] expected = new int[] { 3, 3, 3 };
+        final int[] expected = { 3, 3, 3 };
 
-        int[] actual = fixture.maxEnd3(nums);
+        final int[] actual = fixture.maxEnd3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] nums = new int[] { 11, 5, 9 };
+        final int[] nums = { 11, 5, 9 };
 
-        int[] expected = new int[] { 11, 11, 11 };
+        final int[] expected = { 11, 11, 11 };
 
-        int[] actual = fixture.maxEnd3(nums);
+        final int[] actual = fixture.maxEnd3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] nums = new int[] { 2, 11, 3 };
+        final int[] nums = { 2, 11, 3 };
 
-        int[] expected = new int[] { 3, 3, 3 };
+        final int[] expected = { 3, 3, 3 };
 
-        int[] actual = fixture.maxEnd3(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnEmptyWhenNumIsNull() {
-        int[] nums = null;
-
-        int[] expected = new int[] {};
-
-        int[] actual = fixture.maxEnd3(nums);
+        final int[] actual = fixture.maxEnd3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenNumIsEmpty() {
-        int[] nums = new int[] {};
+    void shouldReturnEmpty_WhenNumIsNull() {
+        final int[] nums = null;
 
-        int[] expected = new int[] {};
+        final int[] expected = {};
 
-        int[] actual = fixture.maxEnd3(nums);
+        final int[] actual = fixture.maxEnd3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenNumIsSingleElement() {
-        int[] nums = new int[] { 1 };
+    void shouldReturnEmpty_WhenNumIsEmpty() {
+        final int[] nums = {};
 
-        int[] expected = new int[] { 1 };
+        final int[] expected = {};
 
-        int[] actual = fixture.maxEnd3(nums);
+        final int[] actual = fixture.maxEnd3(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnEmpty_WhenNumIsSingleElement() {
+        final int[] nums = { 1 };
+
+        final int[] expected = { 1 };
+
+        final int[] actual = fixture.maxEnd3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
