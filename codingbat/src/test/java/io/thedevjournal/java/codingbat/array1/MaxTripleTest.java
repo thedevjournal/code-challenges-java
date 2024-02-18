@@ -17,7 +17,7 @@ class MaxTripleTest {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
         final int expected = 3;
 
@@ -28,7 +28,7 @@ class MaxTripleTest {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 1, 5, 3 };
+        final int[] nums = { 1, 5, 3 };
 
         final int expected = 5;
 
@@ -39,7 +39,7 @@ class MaxTripleTest {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 5, 2, 3 };
+        final int[] nums = { 5, 2, 3 };
 
         final int expected = 5;
 
@@ -49,7 +49,7 @@ class MaxTripleTest {
     }
 
     @Test
-    void shouldThrowExceptionWhenNull() {
+    void shouldThrowException_WhenNull() {
         final int[] nums = null;
 
         assertThatExceptionOfType(IllegalArgumentException.class)
@@ -57,24 +57,24 @@ class MaxTripleTest {
     }
 
     @Test
-    void shouldThrowExceptionWhenEmpty() {
-        final int[] nums = new int[] {};
+    void shouldThrowException_WhenEmpty() {
+        final int[] nums = {};
 
         assertThatExceptionOfType(IllegalArgumentException.class)
                 .isThrownBy(() -> fixture.maxTriple(nums));
     }
 
     @Test
-    void shouldThrowExceptionWhenEvenLength() {
-        final int[] nums = new int[] { 5, 2 };
+    void shouldThrowException_WhenEvenLength() {
+        final int[] nums = { 5, 2 };
 
         assertThatExceptionOfType(IllegalArgumentException.class)
                 .isThrownBy(() -> fixture.maxTriple(nums));
     }
 
     @Test
-    void shouldReturnSameWhenSingleElement() {
-        final int[] nums = new int[] { 5 };
+    void shouldReturnSame_WhenSingleElement() {
+        final int[] nums = { 5 };
 
         final int expected = 5;
 
