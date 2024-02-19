@@ -17,9 +17,9 @@ class MiddleThreeTest {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 2, 3, 4, 5 };
+        final int[] nums = { 1, 2, 3, 4, 5 };
 
-        final int[] expected = new int[] { 2, 3, 4 };
+        final int[] expected = { 2, 3, 4 };
 
         final int[] actual = fixture.midThree(nums);
 
@@ -28,9 +28,9 @@ class MiddleThreeTest {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 8, 6, 7, 5, 3, 0, 9 };
+        final int[] nums = { 8, 6, 7, 5, 3, 0, 9 };
 
-        final int[] expected = new int[] { 7, 5, 3 };
+        final int[] expected = { 7, 5, 3 };
 
         final int[] actual = fixture.midThree(nums);
 
@@ -39,9 +39,9 @@ class MiddleThreeTest {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        final int[] expected = new int[] { 1, 2, 3 };
+        final int[] expected = { 1, 2, 3 };
 
         final int[] actual = fixture.midThree(nums);
 
@@ -49,11 +49,11 @@ class MiddleThreeTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsNullOrEmpty() {
+    void shouldReturnEmpty_WhenNumsIsNullOrEmpty() {
         final int[] nums1 = null;
-        final int[] nums2 = new int[] {};
+        final int[] nums2 = {};
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual1 = fixture.midThree(nums1);
         final int[] actual2 = fixture.midThree(nums2);
@@ -63,8 +63,8 @@ class MiddleThreeTest {
     }
 
     @Test
-    void shouldThrowExceptionWhenNumsHasEvenElement() {
-        final int[] nums = new int[] { 1, 2 };
+    void shouldThrowException_WhenNumsHasEvenElement() {
+        final int[] nums = { 1, 2 };
 
         assertThatExceptionOfType(IllegalArgumentException.class)
                 .isThrownBy(() -> fixture.midThree(nums));
