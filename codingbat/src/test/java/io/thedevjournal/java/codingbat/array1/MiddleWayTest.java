@@ -17,154 +17,154 @@ class MiddleWayTest {
 
     @Test
     void testcase1() {
-        int[] a = new int[] { 1, 2, 3 };
-        int[] b = new int[] { 4, 5, 6 };
+        final int[] arrayA = { 1, 2, 3 };
+        final int[] arrayB = { 4, 5, 6 };
 
-        int[] expected = new int[] { 2, 5 };
+        final int[] expected = { 2, 5 };
 
-        int[] actual = fixture.middleWay(a, b);
+        final int[] actual = fixture.middleWay(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] a = new int[] { 7, 7, 7 };
-        int[] b = new int[] { 3, 8, 0 };
+        final int[] arrayA = { 7, 7, 7 };
+        final int[] arrayB = { 3, 8, 0 };
 
-        int[] expected = new int[] { 7, 8 };
+        final int[] expected = { 7, 8 };
 
-        int[] actual = fixture.middleWay(a, b);
+        final int[] actual = fixture.middleWay(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] a = new int[] { 5, 2, 9 };
-        int[] b = new int[] { 1, 4, 5 };
+        final int[] arrayA = { 5, 2, 9 };
+        final int[] arrayB = { 1, 4, 5 };
 
-        int[] expected = new int[] { 2, 4 };
+        final int[] expected = { 2, 4 };
 
-        int[] actual = fixture.middleWay(a, b);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnEmptyWhenBothAreNull() {
-        int[] a = null;
-        int[] b = null;
-
-        int[] expected = new int[] {};
-
-        int[] actual = fixture.middleWay(a, b);
+        final int[] actual = fixture.middleWay(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenBothAreEmpty() {
-        int[] a = new int[] {};
-        int[] b = new int[] {};
+    void shouldReturnEmpty_WhenBothAreNull() {
+        final int[] arrayA = null;
+        final int[] arrayB = null;
 
-        int[] expected = new int[] {};
+        final int[] expected = {};
 
-        int[] actual = fixture.middleWay(a, b);
+        final int[] actual = fixture.middleWay(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenOneIsEmptyAndOtherIsNull() {
-        int[] a1 = null;
-        int[] b1 = new int[] {};
+    void shouldReturnEmpty_WhenBothAreEmpty() {
+        final int[] arrayA = {};
+        final int[] arrayB = {};
 
-        int[] a2 = new int[] {};
-        int[] b2 = null;
+        final int[] expected = {};
 
-        int[] expected = new int[] {};
+        final int[] actual = fixture.middleWay(arrayA, arrayB);
 
-        int[] actual1 = fixture.middleWay(a1, b1);
-        int[] actual2 = fixture.middleWay(a2, b2);
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnEmpty_WhenOneIsEmptyAndOtherIsNull() {
+        final int[] arrayA1 = null;
+        final int[] arrayB1 = {};
+
+        final int[] arrayA2 = {};
+        final int[] arrayB2 = null;
+
+        final int[] expected = {};
+
+        final int[] actual1 = fixture.middleWay(arrayA1, arrayB1);
+        final int[] actual2 = fixture.middleWay(arrayA2, arrayB2);
 
         assertThat(actual1).isEqualTo(expected);
         assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
-    void shouldThrowExceptionWhenBothAreInvalidLengths1() {
-        int[] a = new int[] { 2, 4 };
-        int[] b = new int[] { 1, 2, 3, 4 };
+    void shouldThrowException_WhenBothAreInvalidLengths1() {
+        final int[] arrayA = { 2, 4 };
+        final int[] arrayB = { 1, 2, 3, 4 };
 
         assertThatExceptionOfType(IllegalArgumentException.class)
-                .isThrownBy(() -> fixture.middleWay(a, b));
+                .isThrownBy(() -> fixture.middleWay(arrayA, arrayB));
     }
 
     @Test
-    void shouldThrowExceptionWhenBothAreInvalidLengths2() {
-        int[] a = new int[] { 1, 2, 3, 4 };
-        int[] b = new int[] { 2, 4 };
+    void shouldThrowException_WhenBothAreInvalidLengths2() {
+        final int[] arrayA = { 1, 2, 3, 4 };
+        final int[] arrayB = { 2, 4 };
 
         assertThatExceptionOfType(IllegalArgumentException.class)
-                .isThrownBy(() -> fixture.middleWay(a, b));
+                .isThrownBy(() -> fixture.middleWay(arrayA, arrayB));
     }
 
     @Test
-    void shouldThrowExceptionWhenOneIsValidAndOtherIsInvalidLength1() {
-        int[] a = new int[] { 1 };
-        int[] b = new int[] { 2, 4 };
+    void shouldThrowException_WhenOneIsValidAndOtherIsInvalidLength1() {
+        final int[] arrayA = { 1 };
+        final int[] arrayB = { 2, 4 };
 
         assertThatExceptionOfType(IllegalArgumentException.class)
-                .isThrownBy(() -> fixture.middleWay(a, b));
+                .isThrownBy(() -> fixture.middleWay(arrayA, arrayB));
     }
 
     @Test
-    void shouldThrowExceptionWhenOneIsValidAndOtherIsInvalidLength2() {
-        int[] a = new int[] { 2, 4 };
-        int[] b = new int[] { 1 };
+    void shouldThrowException_WhenOneIsValidAndOtherIsInvalidLength2() {
+        final int[] arrayA = { 2, 4 };
+        final int[] arrayB = { 1 };
 
         assertThatExceptionOfType(IllegalArgumentException.class)
-                .isThrownBy(() -> fixture.middleWay(a, b));
+                .isThrownBy(() -> fixture.middleWay(arrayA, arrayB));
     }
 
     @Test
-    void shouldReturnValidArrayWhenBothAreValidAndSingleLength() {
-        int[] a = new int[] { 1 };
-        int[] b = new int[] { 2 };
+    void shouldReturnValidArray_WhenBothAreValidAndSingleLength() {
+        final int[] arrayA = { 1 };
+        final int[] arrayB = { 2 };
 
-        int[] expected = new int[] { 1, 2 };
+        final int[] expected = { 1, 2 };
 
-        int[] actual = fixture.middleWay(a, b);
+        final int[] actual = fixture.middleWay(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnValidArrayWhenBothAreValidAndMultipleLength() {
-        int[] a = new int[] { 1, 2, 3 };
-        int[] b = new int[] { 1, 2, 3, 4, 5 };
+    void shouldReturnValidArray_WhenBothAreValidAndMultipleLength() {
+        final int[] arrayA = { 1, 2, 3 };
+        final int[] arrayB = { 1, 2, 3, 4, 5 };
 
-        int[] expected = new int[] { 2, 3 };
+        final int[] expected = { 2, 3 };
 
-        int[] actual = fixture.middleWay(a, b);
+        final int[] actual = fixture.middleWay(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnValidArrayWhenOneIsEmptyAndOtherIsValidLength() {
-        int[] a1 = new int[] { 1 };
-        int[] b1 = new int[] {};
+    void shouldReturnValidArray_WhenOneIsEmptyAndOtherIsValidLength() {
+        final int[] arrayA1 = { 1 };
+        final int[] arrayB1 = {};
 
-        int[] a2 = new int[] {};
-        int[] b2 = new int[] { 1, 2, 3 };
+        final int[] arrayA2 = {};
+        final int[] arrayB2 = { 1, 2, 3 };
 
-        int[] expected1 = new int[] { 1 };
-        int[] expected2 = new int[] { 2 };
+        final int[] expected1 = { 1 };
+        final int[] expected2 = { 2 };
 
-        int[] actual1 = fixture.middleWay(a1, b1);
-        int[] actual2 = fixture.middleWay(a2, b2);
+        final int[] actual1 = fixture.middleWay(arrayA1, arrayB1);
+        final int[] actual2 = fixture.middleWay(arrayA2, arrayB2);
 
         assertThat(actual1).isEqualTo(expected1);
         assertThat(actual2).isEqualTo(expected2);
