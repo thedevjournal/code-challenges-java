@@ -45,7 +45,10 @@ public class MiddleWay {
             final int arrayBLength,
             final boolean arrayBLengthEven) {
 
-        if ((arrayALength > 0 && arrayALengthEven) || (arrayBLength > 0 && arrayBLengthEven)) {
+        final boolean isArrayAValid = arrayALength > 0 && arrayALengthEven;
+        final boolean isArrayBValid = arrayBLength > 0 && arrayBLengthEven;
+
+        if (isArrayAValid || isArrayBValid) {
             throw new IllegalArgumentException();
         }
     }
