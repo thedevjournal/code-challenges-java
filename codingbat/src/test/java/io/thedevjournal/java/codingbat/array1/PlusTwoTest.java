@@ -16,10 +16,10 @@ class PlusTwoTest {
 
     @Test
     void testcase1() {
-        final int[] a = new int[] { 1, 2 };
-        final int[] b = new int[] { 3, 4 };
+        final int[] a = { 1, 2 };
+        final int[] b = { 3, 4 };
 
-        final int[] expected = new int[] { 1, 2, 3, 4 };
+        final int[] expected = { 1, 2, 3, 4 };
 
         final int[] actual = fixture.plusTwo(a, b);
 
@@ -28,10 +28,10 @@ class PlusTwoTest {
 
     @Test
     void testcase2() {
-        final int[] a = new int[] { 4, 4 };
-        final int[] b = new int[] { 2, 2 };
+        final int[] a = { 4, 4 };
+        final int[] b = { 2, 2 };
 
-        final int[] expected = new int[] { 4, 4, 2, 2 };
+        final int[] expected = { 4, 4, 2, 2 };
 
         final int[] actual = fixture.plusTwo(a, b);
 
@@ -40,14 +40,13 @@ class PlusTwoTest {
 
     @Test
     void testcase3() {
-        final int[] a = new int[] { 9, 2 };
-        final int[] b = new int[] { 3, 4 };
+        final int[] a = { 9, 2 };
+        final int[] b = { 3, 4 };
 
-        final int[] expected = new int[] { 9, 2, 3, 4 };
+        final int[] expected = { 9, 2, 3, 4 };
 
         final int[] actual = fixture.plusTwo(a, b);
 
         assertThat(actual).isEqualTo(expected);
     }
-
 }
