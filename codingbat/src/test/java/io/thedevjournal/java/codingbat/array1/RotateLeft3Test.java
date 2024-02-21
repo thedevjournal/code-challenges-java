@@ -16,66 +16,66 @@ class RotateLeft3Test {
 
     @Test
     void testcase1() {
-        int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        int[] expected = new int[] { 2, 3, 1 };
+        final int[] expected = { 2, 3, 1 };
 
-        int[] actual = fixture.rotateLeft3(nums);
+        final int[] actual = fixture.rotateLeft3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] nums = new int[] { 5, 11, 9 };
+        final int[] nums = { 5, 11, 9 };
 
-        int[] expected = new int[] { 11, 9, 5 };
+        final int[] expected = { 11, 9, 5 };
 
-        int[] actual = fixture.rotateLeft3(nums);
+        final int[] actual = fixture.rotateLeft3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] nums = new int[] { 7, 0, 0 };
+        final int[] nums = { 7, 0, 0 };
 
-        int[] expected = new int[] { 0, 0, 7 };
+        final int[] expected = { 0, 0, 7 };
 
-        int[] actual = fixture.rotateLeft3(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnEmptyWhenNumIsNull() {
-        int[] nums = null;
-
-        int[] expected = new int[] {};
-
-        int[] actual = fixture.rotateLeft3(nums);
+        final int[] actual = fixture.rotateLeft3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenNumIsEmpty() {
-        int[] nums = new int[] {};
+    void shouldReturnEmpty_WhenNumIsNull() {
+        final int[] nums = null;
 
-        int[] expected = new int[] {};
+        final int[] expected = {};
 
-        int[] actual = fixture.rotateLeft3(nums);
+        final int[] actual = fixture.rotateLeft3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnSameArrayWhenNumIsSingleLength() {
-        int[] nums = new int[] { 1 };
+    void shouldReturnEmpty_WhenNumIsEmpty() {
+        final int[] nums = {};
 
-        int[] expected = new int[] { 1 };
+        final int[] expected = {};
 
-        int[] actual = fixture.rotateLeft3(nums);
+        final int[] actual = fixture.rotateLeft3(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnSameArray_WhenNumIsSingleLength() {
+        final int[] nums = { 1 };
+
+        final int[] expected = { 1 };
+
+        final int[] actual = fixture.rotateLeft3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
