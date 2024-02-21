@@ -16,55 +16,55 @@ class Reverse3Test {
 
     @Test
     void testcase1() {
-        int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        int[] expected = new int[] { 3, 2, 1 };
+        final int[] expected = { 3, 2, 1 };
 
-        int[] actual = fixture.reverse3(nums);
+        final int[] actual = fixture.reverse3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] nums = new int[] { 5, 11, 9 };
+        final int[] nums = { 5, 11, 9 };
 
-        int[] expected = new int[] { 9, 11, 5 };
+        final int[] expected = { 9, 11, 5 };
 
-        int[] actual = fixture.reverse3(nums);
+        final int[] actual = fixture.reverse3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] nums = new int[] { 7, 0, 0 };
+        final int[] nums = { 7, 0, 0 };
 
-        int[] expected = new int[] { 0, 0, 7 };
+        final int[] expected = { 0, 0, 7 };
 
-        int[] actual = fixture.reverse3(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnEmptyWhenNumIsNull() {
-        int[] nums = null;
-
-        int[] expected = new int[] {};
-
-        int[] actual = fixture.reverse3(nums);
+        final int[] actual = fixture.reverse3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnEmptyWhenNumIsEmpty() {
-        int[] nums = new int[] { };
+    void shouldReturnEmpty_WhenNumIsNull() {
+        final int[] nums = null;
 
-        int[] expected = new int[] { };
+        final int[] expected = {};
 
-        int[] actual = fixture.reverse3(nums);
+        final int[] actual = fixture.reverse3(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnEmpty_WhenNumIsEmpty() {
+        final int[] nums = { };
+
+        final int[] expected = { };
+
+        final int[] actual = fixture.reverse3(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
