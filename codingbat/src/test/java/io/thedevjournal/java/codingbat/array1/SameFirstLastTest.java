@@ -16,66 +16,66 @@ class SameFirstLastTest {
 
     @Test
     void testcase1() {
-        int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        boolean expected = false;
+        final boolean expected = false;
 
-        boolean actual = fixture.sameFirstLast(nums);
+        final boolean actual = fixture.sameFirstLast(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] nums = new int[] { 1, 2, 3, 1 };
+        final int[] nums = { 1, 2, 3, 1 };
 
-        boolean expected = true;
+        final boolean expected = true;
 
-        boolean actual = fixture.sameFirstLast(nums);
+        final boolean actual = fixture.sameFirstLast(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] nums = new int[] { 1, 2, 1 };
+        final int[] nums = { 1, 2, 1 };
 
-        boolean expected = true;
+        final boolean expected = true;
 
-        boolean actual = fixture.sameFirstLast(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnFalseWhenNumsIsNull() {
-        int[] nums = null;
-
-        boolean expected = false;
-
-        boolean actual = fixture.sameFirstLast(nums);
+        final boolean actual = fixture.sameFirstLast(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnFalseWhenNumsIsEmpty() {
-        int[] nums = new int[] {};
+    void shouldReturnFalse_WhenNumsIsNull() {
+        final int[] nums = null;
 
-        boolean expected = false;
+        final boolean expected = false;
 
-        boolean actual = fixture.sameFirstLast(nums);
+        final boolean actual = fixture.sameFirstLast(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnTrueWhenNumsIsSingleElement() {
-        int[] nums = new int[] { 1 };
+    void shouldReturnFalse_WhenNumsIsEmpty() {
+        final int[] nums = {};
 
-        boolean expected = true;
+        final boolean expected = false;
 
-        boolean actual = fixture.sameFirstLast(nums);
+        final boolean actual = fixture.sameFirstLast(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnTrue_WhenNumsIsSingleElement() {
+        final int[] nums = { 1 };
+
+        final boolean expected = true;
+
+        final boolean actual = fixture.sameFirstLast(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
