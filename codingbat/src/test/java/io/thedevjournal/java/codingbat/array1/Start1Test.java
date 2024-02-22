@@ -16,48 +16,48 @@ class Start1Test {
 
     @Test
     void testcase1() {
-        final int[] a = { 1, 2, 3 };
-        final int[] b = { 1, 3 };
+        final int[] arrayA = { 1, 2, 3 };
+        final int[] arrayB = { 1, 3 };
 
         final int expected = 2;
 
-        final int actual = fixture.start1(a, b);
+        final int actual = fixture.start1(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        final int[] a = { 7, 2, 3 };
-        final int[] b = { 1 };
+        final int[] arrayA = { 7, 2, 3 };
+        final int[] arrayB = { 1 };
 
         final int expected = 1;
 
-        final int actual = fixture.start1(a, b);
+        final int actual = fixture.start1(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        final int[] a = { 1, 2 };
-        final int[] b = {};
+        final int[] arrayA = { 1, 2 };
+        final int[] arrayB = {};
 
         final int expected = 1;
 
-        final int actual = fixture.start1(a, b);
+        final int actual = fixture.start1(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase4() {
-        final int[] a = {};
-        final int[] b = { 3 };
+        final int[] arrayA = {};
+        final int[] arrayB = { 3 };
 
         final int expected = 0;
 
-        final int actual = fixture.start1(a, b);
+        final int actual = fixture.start1(arrayA, arrayB);
 
         assertThat(actual).isEqualTo(expected);
     }
