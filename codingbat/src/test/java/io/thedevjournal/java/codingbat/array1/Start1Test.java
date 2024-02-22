@@ -16,8 +16,8 @@ class Start1Test {
 
     @Test
     void testcase1() {
-        final int[] a = new int[] { 1, 2, 3 };
-        final int[] b = new int[] { 1, 3 };
+        final int[] a = { 1, 2, 3 };
+        final int[] b = { 1, 3 };
 
         final int expected = 2;
 
@@ -28,8 +28,8 @@ class Start1Test {
 
     @Test
     void testcase2() {
-        final int[] a = new int[] { 7, 2, 3 };
-        final int[] b = new int[] { 1 };
+        final int[] a = { 7, 2, 3 };
+        final int[] b = { 1 };
 
         final int expected = 1;
 
@@ -40,8 +40,8 @@ class Start1Test {
 
     @Test
     void testcase3() {
-        final int[] a = new int[] { 1, 2 };
-        final int[] b = new int[] {};
+        final int[] a = { 1, 2 };
+        final int[] b = {};
 
         final int expected = 1;
 
@@ -52,8 +52,8 @@ class Start1Test {
 
     @Test
     void testcase4() {
-        final int[] a = new int[] {};
-        final int[] b = new int[] { 3 };
+        final int[] a = {};
+        final int[] b = { 3 };
 
         final int expected = 0;
 
