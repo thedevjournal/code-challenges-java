@@ -16,77 +16,77 @@ class Sum2Test {
 
     @Test
     void testcase1() {
-        int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        int expected = 3;
+        final int expected = 3;
 
-        int actual = fixture.sum2(nums);
+        final int actual = fixture.sum2(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase2() {
-        int[] nums = new int[] { 1, 1 };
+        final int[] nums = { 1, 1 };
 
-        int expected = 2;
+        final int expected = 2;
 
-        int actual = fixture.sum2(nums);
+        final int actual = fixture.sum2(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     void testcase3() {
-        int[] nums = new int[] { 1, 1, 1, 1 };
+        final int[] nums = { 1, 1, 1, 1 };
 
-        int expected = 2;
+        final int expected = 2;
 
-        int actual = fixture.sum2(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnZeroWhenNumIsNull() {
-        int[] nums = null;
-
-        int expected = 0;
-
-        int actual = fixture.sum2(nums);
+        final int actual = fixture.sum2(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnZeroWhenNumIsEmpty() {
-        int[] nums = new int[] {};
+    void shouldReturnZero_WhenNumIsNull() {
+        final int[] nums = null;
 
-        int expected = 0;
+        final int expected = 0;
 
-        int actual = fixture.sum2(nums);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void shouldReturnSumWhenNumIsSingleElement() {
-        int[] nums = new int[] { 1 };
-
-        int expected = 1;
-
-        int actual = fixture.sum2(nums);
+        final int actual = fixture.sum2(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void shouldReturnSumWhenNumIsMultipleElement() {
-        int[] nums = new int[] { 1, 2 };
+    void shouldReturnZero_WhenNumIsEmpty() {
+        final int[] nums = {};
 
-        int expected = 3;
+        final int expected = 0;
 
-        int actual = fixture.sum2(nums);
+        final int actual = fixture.sum2(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnSum_WhenNumIsSingleElement() {
+        final int[] nums = { 1 };
+
+        final int expected = 1;
+
+        final int actual = fixture.sum2(nums);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    void shouldReturnSum_WhenNumIsMultipleElement() {
+        final int[] nums = { 1, 2 };
+
+        final int expected = 3;
+
+        final int actual = fixture.sum2(nums);
 
         assertThat(actual).isEqualTo(expected);
     }
