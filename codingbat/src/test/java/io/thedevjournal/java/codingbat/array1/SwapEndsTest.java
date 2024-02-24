@@ -16,9 +16,9 @@ class SwapEndsTest {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 2, 3, 4 };
+        final int[] nums = { 1, 2, 3, 4 };
 
-        final int[] expected = new int[] { 4, 2, 3, 1 };
+        final int[] expected = { 4, 2, 3, 1 };
 
         final int[] actual = fixture.swapEnds(nums);
 
@@ -27,9 +27,9 @@ class SwapEndsTest {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 1, 2, 3 };
+        final int[] nums = { 1, 2, 3 };
 
-        final int[] expected = new int[] { 3, 2, 1 };
+        final int[] expected = { 3, 2, 1 };
 
         final int[] actual = fixture.swapEnds(nums);
 
@@ -38,9 +38,9 @@ class SwapEndsTest {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 8, 6, 7, 9, 5 };
+        final int[] nums = { 8, 6, 7, 9, 5 };
 
-        final int[] expected = new int[] { 5, 6, 7, 9, 8 };
+        final int[] expected = { 5, 6, 7, 9, 8 };
 
         final int[] actual = fixture.swapEnds(nums);
 
@@ -48,11 +48,11 @@ class SwapEndsTest {
     }
 
     @Test
-    void shouldReturnEmptyWhenNumsIsNullOrEmpty() {
+    void shouldReturnEmpty_WhenNumsIsNullOrEmpty() {
         final int[] nums1 = null;
-        final int[] nums2 = new int[] {};
+        final int[] nums2 = {};
 
-        final int[] expected = new int[] {};
+        final int[] expected = {};
 
         final int[] actual1 = fixture.swapEnds(nums1);
         final int[] actual2 = fixture.swapEnds(nums2);
@@ -62,10 +62,10 @@ class SwapEndsTest {
     }
 
     @Test
-    void shouldReturnSameWhenNumsIsSingleElement() {
-        final int[] nums = new int[] { 1 };
+    void shouldReturnSame_WhenNumsIsSingleElement() {
+        final int[] nums = { 1 };
 
-        final int[] expected = new int[] { 1 };
+        final int[] expected = { 1 };
 
         final int[] actual = fixture.swapEnds(nums);
 
@@ -73,10 +73,10 @@ class SwapEndsTest {
     }
 
     @Test
-    void shouldReturnEndsSwappedWhenNumsIsMultiElement() {
-        final int[] nums = new int[] { 1, 2 };
+    void shouldReturnEndsSwapped_WhenNumsIsMultiElement() {
+        final int[] nums = { 1, 2 };
 
-        final int[] expected = new int[] { 2, 1 };
+        final int[] expected = { 2, 1 };
 
         final int[] actual = fixture.swapEnds(nums);
 
