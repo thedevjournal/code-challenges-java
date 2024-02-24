@@ -16,7 +16,7 @@ class Unlucky1Test {
 
     @Test
     void testcase1() {
-        final int[] nums = new int[] { 1, 3, 4, 5 };
+        final int[] nums = { 1, 3, 4, 5 };
 
         final boolean expected = true;
 
@@ -29,7 +29,7 @@ class Unlucky1Test {
 
     @Test
     void testcase2() {
-        final int[] nums = new int[] { 2, 1, 3, 4, 5 };
+        final int[] nums = { 2, 1, 3, 4, 5 };
 
         final boolean expected = true;
 
@@ -42,7 +42,7 @@ class Unlucky1Test {
 
     @Test
     void testcase3() {
-        final int[] nums = new int[] { 1, 1, 1 };
+        final int[] nums = { 1, 1, 1 };
 
         final boolean expected = false;
 
@@ -54,7 +54,7 @@ class Unlucky1Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumsIsNull() {
+    void shouldReturnFalse_WhenNumsIsNull() {
         final int[] nums = null;
 
         final boolean expected = false;
@@ -67,8 +67,8 @@ class Unlucky1Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumsIsEmpty() {
-        final int[] nums = new int[] {};
+    void shouldReturnFalse_WhenNumsIsEmpty() {
+        final int[] nums = {};
 
         final boolean expected = false;
 
@@ -80,8 +80,8 @@ class Unlucky1Test {
     }
 
     @Test
-    void shouldReturnFalseWhenNumsLengthIsOne() {
-        final int[] nums = new int[] { 1 };
+    void shouldReturnFalse_WhenNumsLengthIsOne() {
+        final int[] nums = { 1 };
 
         final boolean expected = false;
 
@@ -93,9 +93,9 @@ class Unlucky1Test {
     }
 
     @Test
-    void shouldReturnTrueWhenNumsLengthIsGreaterThan2AndUnluck1AtLastPosition() {
+    void shouldReturnTrue_WhenNumsLengthIsGreaterThan2AndUnluck1AtLastPosition() {
 
-        final int[] nums = new int[] { 1, 2, 3, 1, 3 };
+        final int[] nums = { 1, 2, 3, 1, 3 };
 
         final boolean expected = true;
 
