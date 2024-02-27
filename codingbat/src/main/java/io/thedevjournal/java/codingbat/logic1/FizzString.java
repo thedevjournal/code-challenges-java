@@ -12,6 +12,10 @@ public class FizzString {
 
     static final String BUZZ = "Buzz";
 
+    private static final String CHAR_F = "f";
+
+    private static final String CHAR_B = "b";
+
     public String fizzString(final String str) {
 
         final String string = Optional.ofNullable(str).orElseGet(EMPTY_STRING_SUPPLIER).trim();
@@ -28,11 +32,11 @@ public class FizzString {
 
         final String result;
 
-        if (firstChar.equalsIgnoreCase("f") && lastChar.equalsIgnoreCase("b")) {
+        if (CHAR_F.equalsIgnoreCase(firstChar) && CHAR_B.equalsIgnoreCase(lastChar)) {
             result = FIZZBUZZ;
-        } else if (firstChar.equalsIgnoreCase("f")) {
+        } else if (CHAR_F.equalsIgnoreCase(firstChar)) {
             result = FIZZ;
-        } else if (lastChar.equalsIgnoreCase("b")) {
+        } else if (CHAR_B.equalsIgnoreCase(lastChar)) {
             result = BUZZ;
         } else {
             result = string;

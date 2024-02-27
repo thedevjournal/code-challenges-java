@@ -14,7 +14,7 @@ public class CaughtSpeeding {
 
     public int caughtSpeeding(final int speed, final boolean isBirthday) {
 
-        final int[] limits = getLimits(speed, isBirthday);
+        final int[] limits = getLimits(isBirthday);
 
         final int lowerLimit = limits[0];
         final int upperLimit = limits[1];
@@ -32,7 +32,7 @@ public class CaughtSpeeding {
         return speedingTicket;
     }
 
-    private int[] getLimits(final int speed, final boolean isBirthday) {
+    private int[] getLimits(final boolean isBirthday) {
 
         final int lowerLimit = isBirthday ? LIMITS_BIRTHDAY[0] : LIMITS_NOT_BIRTHDAY[0];
         final int upperLimit = isBirthday ? LIMITS_BIRTHDAY[1] : LIMITS_NOT_BIRTHDAY[1];
