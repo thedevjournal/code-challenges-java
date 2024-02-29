@@ -59,7 +59,7 @@ class RandomValuesUtilTest {
 
         final boolean actual = randomFlag();
 
-        final boolean assertValue = actual == true || actual == false;
+        final boolean assertValue = actual || !actual;
 
         assertThat(assertValue).isTrue();
     }
