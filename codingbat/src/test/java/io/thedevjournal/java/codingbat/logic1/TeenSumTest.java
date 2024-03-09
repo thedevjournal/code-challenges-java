@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 
 class TeenSumTest {
 
-    static final Integer[] TEENS = new Integer[] { THIRTEEN, FOURTEEN, FIFTEEN, SIXTEEN, SEVENTEEN, EIGHTEEN, NINETEEN };
+    static final Integer[] TEENS = { THIRTEEN, FOURTEEN, FIFTEEN, SIXTEEN, SEVENTEEN, EIGHTEEN, NINETEEN };
 
     private TeenSum fixture;
 
