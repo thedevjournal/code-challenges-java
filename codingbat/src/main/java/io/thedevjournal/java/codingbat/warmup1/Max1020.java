@@ -13,9 +13,10 @@ public class Max1020 {
         int max = 0;
 
         /*
-        - The coverage for the below line cannot be 100%.
-        - Uncovered condition: isValue1inRange = true and value1 > max = false
-        - This is not possible because if value1 is in range, it can never be less than max
+        The coverage for the below line cannot be 100%.
+        Uncovered condition: isValue1inRange = true and value1 > max = false
+        This is not possible because if value1 is in range,
+        it can never be less than max
         */
         if (isValue1inRange && value1 > max) {
             max = value1;
