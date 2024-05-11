@@ -1,0 +1,26 @@
+version: 2.1
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/openjdk:11.0
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: |
+            # Build the project
+            mvn -B clean verify
+
+            # Install and Run Deepsource Analysis
+            curl https://deepsource.io/cli | sh
+            ./bin/deepsource report --analyzer test-coverage \
+                --key java \
+                --value-file jacoco-report/target/site/jacoco-aggregate/jacoco.xml
+
+workflows:
+  build:
+    jobs:
+      - build-and-test:
+          context:
+            - DEEPSOURCE
