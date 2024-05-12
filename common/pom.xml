@@ -14,4 +14,7 @@
   <name>Common</name>
   <packaging>jar</packaging>
 
+  <properties>
+    <project-root>${basedir}/..</project-root>
+  </properties>
 </project>

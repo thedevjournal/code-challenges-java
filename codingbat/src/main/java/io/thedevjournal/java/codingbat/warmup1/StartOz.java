@@ -6,6 +6,10 @@ import static io.thedevjournal.java.common.NumberConstants.ZERO;
 
 public class StartOz {
 
+    static final String O_STRING = "o";
+
+    static final String Z_STRING = "z";
+
     public final String startOz(final String str) {
 
         final StringBuilder output = new StringBuilder();
@@ -15,11 +19,11 @@ public class StartOz {
             final String first = str.substring(ZERO, ONE);
             final String second = str.substring(ONE, TWO);
 
-            if ("o".equals(first)) {
+            if (O_STRING.equals(first)) {
                 output.append(first);
             }
 
-            if ("z".equals(second)) {
+            if (Z_STRING.equals(second)) {
                 output.append(second);
             }
 
