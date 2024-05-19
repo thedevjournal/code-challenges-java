@@ -139,4 +139,17 @@ class StartWordTest {
 
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    void shouldReturnEmpty_WhenInputAndWordAreCompletelyDifferent() {
+
+        final String input = "hello";
+        final String word = "ab";
+
+        final String expected = "";
+
+        final String actual = fixture.startWord(input, word);
+
+        assertThat(actual).isEqualTo(expected);
+    }
 }
